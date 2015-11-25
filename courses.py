@@ -24,9 +24,13 @@ def parse_courses():
     subjects = {}
     name = ''  # the most recent course name acronym (ex. 'COMP')
 
-    COURSES.split()
+    courses = re.sub(r'\([^)]*\)', '', COURSES)  # Remove parens and their contents
+    courses.split()
 
-    for course in COURSES:
+    for course in courses:
+        if course == 'OR':
+            continue
+
         if course[0].isalpha():
             name = course[:4]
             number = course[4:8]
