@@ -1,5 +1,5 @@
 # audit-reqs
-Turns your degree audit's list of requirements into something actually useful. The online degree audit tool lists a bunch of links to course descriptions but it's impossible to tell what classes they are unless you click every single link. This tool turns the list of links into a list of course names.
+The online degree audit tool lists a bunch of links to course descriptions but it's impossible to tell what classes they are unless you click every single link. This tool turns the list of links into a list of course names.
 
 ![example](/art/screenshot.png?raw=true "Example")
 
