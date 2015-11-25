@@ -8,6 +8,6 @@ The online degree audit tool lists a bunch of links to course descriptions but i
 2. Replace the first line in courses.py with your list of requirements from the degree audit. Make sure that each requirement is separated by a single space.
 3. Open Terminal and make sure you have Python installed (Linux and Mac users have python installed by default).
 4. Navigate to where you downloaded courses.py
-5. Type "courses.py >> courses".
-6. Wait about 5 minutes while it does its thing. DON'T close your terminal. It may seem like it's frozen but it's not!!! This could take a while depending on your internet connection.
-7. Once it's completed, open up the new courses file with the file editor of your choice.
+5. Type "python courses.py output", change "output" to whatever file you want to save the list of courses to. 
+6. Wait while it does its thing. There's even a nice progress bar and everything.
+7. Once it's done, you can open up the output file and see your list of classes.
