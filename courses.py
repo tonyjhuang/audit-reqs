@@ -6,7 +6,6 @@ COURSES = "AFAM1101 1104 1109 1113 1140 1212 1270 2337 2338 2344 2399 4640 4710 
 
 """
 Assumptions:
-    All subject names are 4-letter acronyms
     All course numbers are 4-digit numbers
     If a new subject is listed, the format will be ABCD1234 (i.e. no spaces between name and number)
     If a subject number is listed without a course subject acronym, it's subject is the most recently seen subject:
@@ -31,8 +30,16 @@ def parse_courses():
             continue
 
         if course[0].isalpha():
-            name = course[:4]
-            number = course[4:8]
+
+            index = 0  # the upper bound character index of the subject name
+            for char in course:
+                if char.isalpha():
+                    index += 1
+                else:
+                    break
+
+            name = course[:index]
+            number = course[index:index+4]
         else:
             number = course[:4]
 
