@@ -65,7 +65,7 @@ def lookup(subjects, target):
     # file I/o
     out = open(target, "w")
 
-    for subject in subjects:
+    for subject in sorted(subjects):
         for course_num in subjects[subject]:
             page = urllib.urlopen(url.format(subject, course_num)).read()
             match = p.findall(page)
